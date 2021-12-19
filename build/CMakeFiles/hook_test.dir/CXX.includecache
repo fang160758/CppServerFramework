@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fang/workspace/fangser/inc/hook.h
+unistd.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+fcntl.h
+-
+
+/home/fang/workspace/fangser/tests/hook_test.cc
+../inc/hook.h
+/home/fang/workspace/fangser/inc/hook.h
+

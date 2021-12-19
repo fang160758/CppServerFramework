@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fang/workspace/fangser/http/http.h
+memory
+-
+string.h
+-
+map
+-
+stdint.h
+-
+boost/lexical_cast.hpp
+-
+iostream
+-
+vector
+-
+
+/home/fang/workspace/fangser/tests/http_test.cc
+../http/http.h
+/home/fang/workspace/fangser/http/http.h
+iostream
+-
+

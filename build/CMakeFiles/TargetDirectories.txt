@@ -1,0 +1,4 @@
+/home/fang/workspace/fangser/build/CMakeFiles/rebuild_cache.dir
+/home/fang/workspace/fangser/build/CMakeFiles/edit_cache.dir
+/home/fang/workspace/fangser/build/CMakeFiles/test_scheduler.dir
+/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir

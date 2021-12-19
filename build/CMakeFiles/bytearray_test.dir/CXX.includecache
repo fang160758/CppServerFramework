@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fang/workspace/fangser/inc/bytearray.h
+memory
+-
+string.h
+-
+stdint.h
+-
+
+/home/fang/workspace/fangser/tests/test_bytearray.cc
+../inc/bytearray.h
+/home/fang/workspace/fangser/inc/bytearray.h
+vector
+-
+stdlib.h
+-
+iostream
+-
+stdint.h
+-
+
