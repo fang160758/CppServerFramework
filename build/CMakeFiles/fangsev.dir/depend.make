@@ -15,6 +15,19 @@ CMakeFiles/fangsev.dir/http/http_parser.cc.o: ../http/http_parser.cc
 CMakeFiles/fangsev.dir/http/http_parser.cc.o: ../http/http_parser.h
 CMakeFiles/fangsev.dir/http/http_parser.cc.o: ../http/httpclient_parser.h
 
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http11_common.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http11_parser.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http_parser.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http_session.cc
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http_session.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/httpclient_parser.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../inc/address.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../inc/bytearray.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../inc/socket.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../inc/stream.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o: ../stream/socket_stream.h
+
 CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o: ../http/http11_common.h
 CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o: ../http/httpclient_parser.cc
 CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o: ../http/httpclient_parser.h
@@ -101,6 +114,10 @@ CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/socket.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../src/socket.cc
 
+CMakeFiles/fangsev.dir/src/stream.cc.o: ../inc/bytearray.h
+CMakeFiles/fangsev.dir/src/stream.cc.o: ../inc/stream.h
+CMakeFiles/fangsev.dir/src/stream.cc.o: ../src/stream.cc
+
 CMakeFiles/fangsev.dir/src/thread.cc.o: ../inc/fiber.h
 CMakeFiles/fangsev.dir/src/thread.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/thread.cc.o: ../inc/log.h
@@ -113,4 +130,11 @@ CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/mutex.h
 CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/timer.h
 CMakeFiles/fangsev.dir/src/timer.cc.o: ../src/timer.cc
+
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../inc/address.h
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../inc/bytearray.h
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../inc/socket.h
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../inc/stream.h
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../stream/socket_stream.cc
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../stream/socket_stream.h
 

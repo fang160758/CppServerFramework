@@ -29,10 +29,13 @@ set(LIB_SRC
         src/thread.cc
         src/scheduler.cc
         src/iomanager.cc
+        src/stream.cc
         http/http.cc
         http/http11_parser.cc
         http/httpclient_parser.cc
         http/http_parser.cc
+        http/http_session.cc
+        stream/socket_stream.cc
 		)
 
 

@@ -6,7 +6,28 @@
 
 namespace fang {
 namespace http {
+        
+    static uint64_t s_http_request_buffer_size = 0;
+    static uint64_t s_http_request_max_body_size = 0;
+    static uint64_t s_http_response_buffer_size = 0;
+    static uint64_t s_http_response_max_body_size = 0;
+
     
+    uint64_t HttpRequestParser::GetHttpResquestBufferSize() {
+        return s_http_request_buffer_size;
+    }
+    uint64_t HttpRequestParser::GetHttpResquestMaxBodySize() {
+        return s_http_request_max_body_size;
+    }
+    uint64_t HttpRequestParser::GetHttpResponseBufferSize() {
+        return s_http_response_buffer_size;
+    }
+    uint64_t HttpRequestParser::GetHttpResponseMaxBodySize() {
+        return s_http_response_max_body_size;
+    }
+
+
+
     void on_request_method(void *data, const char *at, size_t length) {
         HttpRequestParser * req = static_cast<HttpRequestParser*>(data);
         HttpMethod m = CharsToHttpMrthod(at);
@@ -173,6 +194,12 @@ namespace http {
         m_parser.last_chunk    = on_response_last_chunk;
         m_parser.http_field    = on_response_http_field;
         m_parser.data = this;
+    }
+    std::ostream& operator<<(std::ostream& os, const HttpRequest& req) {
+        return req.dump(os);
+    }
+    std::ostream& operator<<(std::ostream& os, const HttpResponse& rsp) {
+        return rsp.dump(os);
     }
 }
 }

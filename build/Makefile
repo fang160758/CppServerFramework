@@ -220,6 +220,33 @@ http/http_parser.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_parser.cc.s
 .PHONY : http/http_parser.cc.s
 
+http/http_session.o: http/http_session.cc.o
+
+.PHONY : http/http_session.o
+
+# target to build an object file
+http/http_session.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_session.cc.o
+.PHONY : http/http_session.cc.o
+
+http/http_session.i: http/http_session.cc.i
+
+.PHONY : http/http_session.i
+
+# target to preprocess a source file
+http/http_session.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_session.cc.i
+.PHONY : http/http_session.cc.i
+
+http/http_session.s: http/http_session.cc.s
+
+.PHONY : http/http_session.s
+
+# target to generate assembly for a file
+http/http_session.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_session.cc.s
+.PHONY : http/http_session.cc.s
+
 http/httpclient_parser.o: http/httpclient_parser.cc.o
 
 .PHONY : http/httpclient_parser.o
@@ -544,6 +571,33 @@ src/socket.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/socket.cc.s
 .PHONY : src/socket.cc.s
 
+src/stream.o: src/stream.cc.o
+
+.PHONY : src/stream.o
+
+# target to build an object file
+src/stream.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/stream.cc.o
+.PHONY : src/stream.cc.o
+
+src/stream.i: src/stream.cc.i
+
+.PHONY : src/stream.i
+
+# target to preprocess a source file
+src/stream.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/stream.cc.i
+.PHONY : src/stream.cc.i
+
+src/stream.s: src/stream.cc.s
+
+.PHONY : src/stream.s
+
+# target to generate assembly for a file
+src/stream.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/stream.cc.s
+.PHONY : src/stream.cc.s
+
 src/thread.o: src/thread.cc.o
 
 .PHONY : src/thread.o
@@ -598,6 +652,33 @@ src/timer.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/timer.cc.s
 .PHONY : src/timer.cc.s
 
+stream/socket_stream.o: stream/socket_stream.cc.o
+
+.PHONY : stream/socket_stream.o
+
+# target to build an object file
+stream/socket_stream.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/socket_stream.cc.o
+.PHONY : stream/socket_stream.cc.o
+
+stream/socket_stream.i: stream/socket_stream.cc.i
+
+.PHONY : stream/socket_stream.i
+
+# target to preprocess a source file
+stream/socket_stream.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/socket_stream.cc.i
+.PHONY : stream/socket_stream.cc.i
+
+stream/socket_stream.s: stream/socket_stream.cc.s
+
+.PHONY : stream/socket_stream.s
+
+# target to generate assembly for a file
+stream/socket_stream.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/socket_stream.cc.s
+.PHONY : stream/socket_stream.cc.s
+
 tests/test_scheduler.o: tests/test_scheduler.cc.o
 
 .PHONY : tests/test_scheduler.o
@@ -644,6 +725,9 @@ help:
 	@echo "... http/http_parser.o"
 	@echo "... http/http_parser.i"
 	@echo "... http/http_parser.s"
+	@echo "... http/http_session.o"
+	@echo "... http/http_session.i"
+	@echo "... http/http_session.s"
 	@echo "... http/httpclient_parser.o"
 	@echo "... http/httpclient_parser.i"
 	@echo "... http/httpclient_parser.s"
@@ -680,12 +764,18 @@ help:
 	@echo "... src/socket.o"
 	@echo "... src/socket.i"
 	@echo "... src/socket.s"
+	@echo "... src/stream.o"
+	@echo "... src/stream.i"
+	@echo "... src/stream.s"
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
+	@echo "... stream/socket_stream.o"
+	@echo "... stream/socket_stream.i"
+	@echo "... stream/socket_stream.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"

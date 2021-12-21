@@ -229,6 +229,7 @@ class HttpRequest {
         bool hasParam (const std::string& key, std::string* val = nullptr);
         bool hasCookie (const std::string& key, std::string* val = nullptr);
                 
+        void init();
 
         template<typename T>
             bool checkGetHeaderAs(const std::string& key, T& val, const T& def = T()) {

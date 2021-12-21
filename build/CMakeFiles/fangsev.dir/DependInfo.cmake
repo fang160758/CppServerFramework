@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fang/workspace/fangser/http/http.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/http/http.cc.o"
   "/home/fang/workspace/fangser/http/http11_parser.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/http/http11_parser.cc.o"
   "/home/fang/workspace/fangser/http/http_parser.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/http/http_parser.cc.o"
+  "/home/fang/workspace/fangser/http/http_session.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/http/http_session.cc.o"
   "/home/fang/workspace/fangser/http/httpclient_parser.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o"
   "/home/fang/workspace/fangser/src/address.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/address.cc.o"
   "/home/fang/workspace/fangser/src/bytearray.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/bytearray.cc.o"
@@ -19,8 +20,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fang/workspace/fangser/src/mutex.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/mutex.cc.o"
   "/home/fang/workspace/fangser/src/scheduler.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/scheduler.cc.o"
   "/home/fang/workspace/fangser/src/socket.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/socket.cc.o"
+  "/home/fang/workspace/fangser/src/stream.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/stream.cc.o"
   "/home/fang/workspace/fangser/src/thread.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/thread.cc.o"
   "/home/fang/workspace/fangser/src/timer.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/timer.cc.o"
+  "/home/fang/workspace/fangser/stream/socket_stream.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/stream/socket_stream.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

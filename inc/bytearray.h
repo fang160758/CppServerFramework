@@ -4,6 +4,8 @@
 #include <memory>
 #include <string.h>
 #include <stdint.h>
+#include <vector>
+#include <sys/uio.h>
 
 #define DEFAULT_NODE_SIZE 4096
 namespace fang {
@@ -71,11 +73,16 @@ namespace fang {
             std::string toString() const;
             std::string toHexString() const;
 
+            uint64_t getReadBuffers(std::vector<iovec>& buffers, uint64_t len = ~0ull) const;
+            uint64_t getReadBuffers(std::vector<iovec>& buffers, uint64_t len, uint64_t position) const;
+            uint64_t getWriteBuffers(std::vector<iovec>& buffers, uint64_t len);
+
             
             void clear();
             void addCapacity(size_t size);
             void setPosition(size_t v);
 
+            size_t getPosition() const { return m_position; }
             size_t getSize(void) const { return m_size; }
             size_t getCapacity() const { return m_capacity - m_position; }
             size_t getReadSize() const { return m_size - m_position; }

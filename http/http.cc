@@ -1,4 +1,5 @@
 #include "http.h"
+#include <string>
 
 
 namespace fang {
@@ -113,6 +114,16 @@ namespace http {
         return true;
     }
 
+    void HttpRequest::init() {
+        std::string conn = getHeaders("connection");
+        if (!conn.empty()) {
+            if (strcasecmp(conn.c_str(), "keep-alive") == 0) {
+                m_close = false;
+            } else {
+                m_close = true;
+            }
+        }
+    }
 
     std::string HttpRequest::toString() const {
         std::stringstream m_ss;

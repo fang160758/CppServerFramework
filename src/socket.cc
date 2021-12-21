@@ -1,7 +1,10 @@
 #include "../inc/socket.h"
 #include "../inc/fd_manager.h"
 //#include "../inc/mydef.h"
+#include <ctime>
 #include <netinet/tcp.h>
+#include <string>
+#include <sys/socket.h>
 
 #include "../inc/hook.h"
 
@@ -181,7 +184,15 @@ namespace fang {
         getRemoteAddress();
         return true;
     }
-
+    
+    bool Socket::reconnect(uint64_t timeout_ms) {
+        if (!m_remoteAddress) {
+            FANG_LOG_ERROR(g_logger) << "reconnect m_remoteAddress is nullptrl";
+            return false;
+        }
+        m_localAddress.reset();
+        return connect(m_remoteAddress, timeout_ms);
+    }
 
     bool Socket::listen(int backlog) {
         if(!isValid()) {
@@ -385,6 +396,12 @@ std::ostream& Socket::dump(std::ostream& os) const {
     return os;
 }
 
+std::string Socket::toString() const {
+    std::stringstream ss;
+    dump(ss);
+    return ss.str();
+}
+
 void Socket::initSock() {
     int val = 1;
     setOption(SOL_SOCKET, SO_REUSEADDR, &val);
@@ -400,6 +417,62 @@ void Socket::newSock() {
     } else {
         fprintf(stderr, "socket error");
     }
+}
+    static SSLSocket::ptr CreateTCP(fang::Address::ptr address);
+    static SSLSocket::ptr CreateTCPScoket();
+    static SSLSocket::ptr CreateTCPScoket6();
+
+    SSLSocket(int family, int type, int protocol)
+        :Socket(family, type, protocol) {}
+
+        Socket::ptr SSLSocket::accept()  {
+            SSLSocket::ptr sock(new SSLSocket(m_family, m_type, m_protocol));
+            int newsock = ::accept(m_sock, nullptr, nullptr);
+            if (newsock == -1) {
+                FANG_LOG_ERROR(g_logger) << "accept(" <<m_sock 
+                                        << ") error=" << errno
+                                        << " errstr=" << strerror(errno);
+                return nullptr;
+            }
+            sock->m_ctx = m_ctx;
+            if (sock->init(newsock)) {
+                return sock;
+            }
+            return nullptr;
+        }
+bool SSLSocket::bind(const Address::ptr addr)  {
+    return Socket::bind(addr);
+}
+bool SSLSocket::connect(const Address::ptr addr, uint64_t timeout_ms = -1) {
+    bool v = Socket::connect(addr, timeout_ms);
+    if (v) {
+        m_ctx.reset(SSL)
+    }
+}
+     bool SSLSocket::reconnect(uint64_t timeout_ms = -1) ;
+     bool SSLSocket::listen(int backlog = SOMAXCONN) ;
+     bool SSLSocket::close() ;
+                
+     int send(const void* buffer, size_t length, int flags = 0) ;
+     int send(const struct iovec* buffers, size_t length, int flags = 0) ;
+     int sendTo(const void* buffer, size_t length, Address::ptr, int flags = 0) ;
+     int sendTo(const struct iovec* buffers, size_t length, Address::ptr, int flags = 0) ;
+
+     int recv(void* buffer, size_t length, int flags = 0) ;
+     int recv(struct iovec* buffers, size_t length, int flags = 0) ;
+     int recvFrom(void* buffer, size_t length, Address::ptr, int flags = 0) ;
+     int recvFrom(struct iovec* buffers, size_t length, Address::ptr, int flags = 0) ;
+
+    bool loadCertificates(const std::string& cerf_file, const std::string& key_file);
+
+     std::ostream& dump(std::ostream& os) const ;
+
+protected:
+     bool init(int sock) ;
+
+
+std::ostream& operator<<(std::ostream& os, const Socket& sock) {
+    return sock.dump(os);
 }
 
 }

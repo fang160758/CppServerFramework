@@ -15,6 +15,19 @@ CMakeFiles/fangsev.dir/http/http_parser.cc.o
  /home/fang/workspace/fangser/http/http_parser.cc
  /home/fang/workspace/fangser/http/http_parser.h
  /home/fang/workspace/fangser/http/httpclient_parser.h
+CMakeFiles/fangsev.dir/http/http_session.cc.o
+ /home/fang/workspace/fangser/http/http.h
+ /home/fang/workspace/fangser/http/http11_common.h
+ /home/fang/workspace/fangser/http/http11_parser.h
+ /home/fang/workspace/fangser/http/http_parser.h
+ /home/fang/workspace/fangser/http/http_session.cc
+ /home/fang/workspace/fangser/http/http_session.h
+ /home/fang/workspace/fangser/http/httpclient_parser.h
+ /home/fang/workspace/fangser/inc/address.h
+ /home/fang/workspace/fangser/inc/bytearray.h
+ /home/fang/workspace/fangser/inc/socket.h
+ /home/fang/workspace/fangser/inc/stream.h
+ /home/fang/workspace/fangser/stream/socket_stream.h
 CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o
  /home/fang/workspace/fangser/http/http11_common.h
  /home/fang/workspace/fangser/http/httpclient_parser.cc
@@ -101,6 +114,10 @@ CMakeFiles/fangsev.dir/src/socket.cc.o
  /home/fang/workspace/fangser/inc/singleton.h
  /home/fang/workspace/fangser/inc/socket.h
  /home/fang/workspace/fangser/src/socket.cc
+CMakeFiles/fangsev.dir/src/stream.cc.o
+ /home/fang/workspace/fangser/inc/bytearray.h
+ /home/fang/workspace/fangser/inc/stream.h
+ /home/fang/workspace/fangser/src/stream.cc
 CMakeFiles/fangsev.dir/src/thread.cc.o
  /home/fang/workspace/fangser/inc/fiber.h
  /home/fang/workspace/fangser/inc/helpc.h
@@ -114,3 +131,10 @@ CMakeFiles/fangsev.dir/src/timer.cc.o
  /home/fang/workspace/fangser/inc/singleton.h
  /home/fang/workspace/fangser/inc/timer.h
  /home/fang/workspace/fangser/src/timer.cc
+CMakeFiles/fangsev.dir/stream/socket_stream.cc.o
+ /home/fang/workspace/fangser/inc/address.h
+ /home/fang/workspace/fangser/inc/bytearray.h
+ /home/fang/workspace/fangser/inc/socket.h
+ /home/fang/workspace/fangser/inc/stream.h
+ /home/fang/workspace/fangser/stream/socket_stream.cc
+ /home/fang/workspace/fangser/stream/socket_stream.h
