@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fangsev.dir/http/http_parser.cc.o"
   "CMakeFiles/fangsev.dir/http/http_session.cc.o"
   "CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o"
+  "CMakeFiles/fangsev.dir/http/servlet.cc.o"
   "CMakeFiles/fangsev.dir/src/address.cc.o"
   "CMakeFiles/fangsev.dir/src/bytearray.cc.o"
   "CMakeFiles/fangsev.dir/src/fd_manager.cc.o"

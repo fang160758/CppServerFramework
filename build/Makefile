@@ -274,6 +274,33 @@ http/httpclient_parser.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.cc.s
 .PHONY : http/httpclient_parser.cc.s
 
+http/servlet.o: http/servlet.cc.o
+
+.PHONY : http/servlet.o
+
+# target to build an object file
+http/servlet.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/servlet.cc.o
+.PHONY : http/servlet.cc.o
+
+http/servlet.i: http/servlet.cc.i
+
+.PHONY : http/servlet.i
+
+# target to preprocess a source file
+http/servlet.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/servlet.cc.i
+.PHONY : http/servlet.cc.i
+
+http/servlet.s: http/servlet.cc.s
+
+.PHONY : http/servlet.s
+
+# target to generate assembly for a file
+http/servlet.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/servlet.cc.s
+.PHONY : http/servlet.cc.s
+
 src/address.o: src/address.cc.o
 
 .PHONY : src/address.o
@@ -731,6 +758,9 @@ help:
 	@echo "... http/httpclient_parser.o"
 	@echo "... http/httpclient_parser.i"
 	@echo "... http/httpclient_parser.s"
+	@echo "... http/servlet.o"
+	@echo "... http/servlet.i"
+	@echo "... http/servlet.s"
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"

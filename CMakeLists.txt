@@ -35,6 +35,7 @@ set(LIB_SRC
         http/httpclient_parser.cc
         http/http_parser.cc
         http/http_session.cc
+        http/servlet.cc
         stream/socket_stream.cc
 		)
 

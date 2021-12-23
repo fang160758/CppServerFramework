@@ -32,6 +32,18 @@ CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o: ../http/http11_common.h
 CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o: ../http/httpclient_parser.cc
 CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o: ../http/httpclient_parser.h
 
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/http.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/http_session.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/servlet.cc
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/servlet.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/address.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/bytearray.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/singleton.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/socket.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/stream.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../stream/socket_stream.h
+
 CMakeFiles/fangsev.dir/src/address.cc.o: ../inc/address.h
 CMakeFiles/fangsev.dir/src/address.cc.o: ../inc/endian_.h
 CMakeFiles/fangsev.dir/src/address.cc.o: ../src/address.cc
@@ -108,10 +120,14 @@ CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../src/scheduler.cc
 
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/address.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/fd_manager.h
+CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/fiber.h
+CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/hook.h
+CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/log.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/mutex.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/socket.h
+CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/thread.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../src/socket.cc
 
 CMakeFiles/fangsev.dir/src/stream.cc.o: ../inc/bytearray.h

@@ -113,44 +113,44 @@ protected:
     Address::ptr m_remoteAddress;
 };
 
-class SSLSocket : public Socket {
-public:
-    typedef std::shared_ptr<SSLSocket> ptr;
-
-    static SSLSocket::ptr CreateTCP(fang::Address::ptr address);
-    static SSLSocket::ptr CreateTCPScoket();
-    static SSLSocket::ptr CreateTCPScoket6();
-
-    SSLSocket(int family, int type, int protocol = 0);
-
-    virtual Socket::ptr accept() override;
-    virtual bool bind(const Address::ptr) override;
-    virtual bool connect(const Address::ptr, uint64_t timeout_ms = -1) override;
-    virtual bool reconnect(uint64_t timeout_ms = -1) override;
-    virtual bool listen(int backlog = SOMAXCONN) override;
-    virtual bool close() override;
-                
-    virtual int send(const void* buffer, size_t length, int flags = 0) override;
-    virtual int send(const struct iovec* buffers, size_t length, int flags = 0) override;
-    virtual int sendTo(const void* buffer, size_t length, Address::ptr, int flags = 0) override;
-    virtual int sendTo(const struct iovec* buffers, size_t length, Address::ptr, int flags = 0) override;
-
-    virtual int recv(void* buffer, size_t length, int flags = 0) override;
-    virtual int recv(struct iovec* buffers, size_t length, int flags = 0) override;
-    virtual int recvFrom(void* buffer, size_t length, Address::ptr, int flags = 0) override;
-    virtual int recvFrom(struct iovec* buffers, size_t length, Address::ptr, int flags = 0) override;
-
-    bool loadCertificates(const std::string& cerf_file, const std::string& key_file);
-
-    virtual std::ostream& dump(std::ostream& os) const override;
-
-protected:
-    virtual bool init(int sock) override;
-
-private:
-    std::shared_ptr<SSL_CTX> m_ctx;
-    std::shared_ptr<SSL> m_ssl;
-};
+//class SSLSocket : public Socket {
+//public:
+//    typedef std::shared_ptr<SSLSocket> ptr;
+//
+//    static SSLSocket::ptr CreateTCP(fang::Address::ptr address);
+//    static SSLSocket::ptr CreateTCPScoket();
+//    static SSLSocket::ptr CreateTCPScoket6();
+//
+//    SSLSocket(int family, int type, int protocol = 0);
+//
+//    virtual Socket::ptr accept() override;
+//    virtual bool bind(const Address::ptr) override;
+//    virtual bool connect(const Address::ptr, uint64_t timeout_ms = -1) override;
+//    virtual bool reconnect(uint64_t timeout_ms = -1) override;
+//    virtual bool listen(int backlog = SOMAXCONN) override;
+//    virtual bool close() override;
+//                
+//    virtual int send(const void* buffer, size_t length, int flags = 0) override;
+//    virtual int send(const struct iovec* buffers, size_t length, int flags = 0) override;
+//    virtual int sendTo(const void* buffer, size_t length, Address::ptr, int flags = 0) override;
+//    virtual int sendTo(const struct iovec* buffers, size_t length, Address::ptr, int flags = 0) override;
+//
+//    virtual int recv(void* buffer, size_t length, int flags = 0) override;
+//    virtual int recv(struct iovec* buffers, size_t length, int flags = 0) override;
+//    virtual int recvFrom(void* buffer, size_t length, Address::ptr, int flags = 0) override;
+//    virtual int recvFrom(struct iovec* buffers, size_t length, Address::ptr, int flags = 0) override;
+//
+//    bool loadCertificates(const std::string& cerf_file, const std::string& key_file);
+//
+//    virtual std::ostream& dump(std::ostream& os) const override;
+//
+//protected:
+//    virtual bool init(int sock) override;
+//
+//private:
+//    std::shared_ptr<SSL_CTX> m_ctx;
+//    std::shared_ptr<SSL> m_ssl;
+//};
 
 std::ostream& operator<<(std::ostream& os, const Socket& sock);
 }

@@ -228,6 +228,7 @@ class HttpRequest {
         bool hasHeader (const std::string& key, std::string* val = nullptr);
         bool hasParam (const std::string& key, std::string* val = nullptr);
         bool hasCookie (const std::string& key, std::string* val = nullptr);
+        bool isClose() const { return m_close; }
                 
         void init();
 
