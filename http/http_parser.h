@@ -48,7 +48,7 @@ namespace http {
             int hasError();
 
             HttpResponse::ptr getData() const { return m_data; }
-            const httpclient_parser& getParams() const { return m_parser; }
+            const httpclient_parser& getParser() const { return m_parser; }
             void setError(int v) { m_error = v; }
             
             uint64_t getContentLength() const {
