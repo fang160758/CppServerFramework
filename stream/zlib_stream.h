@@ -43,24 +43,37 @@ public:
     static ZlibStream::ptr CreateZlib(   bool encode, uint32_t buff_size = 4096);
     static ZlibStream::ptr CreateDeflate(bool encode, uint32_t buff_size = 4096);
     static ZlibStream::ptr Create(       bool encode, uint32_t buff_size = 4096
-            , Type type = DEFAULT, int level = DEFAULT_COMPRESSION, int window_bits = 15
+            , Type type = DEFLATE, int level = DEFAULT_COMPRESSION, int window_bits = 15
             , int memlevel = 8, Strategy strategy = DEFAULT);
 
     ZlibStream(bool encode, uint32_t buff_size = 4096);
     ~ZlibStream();
 
+    virtual int read(void* buffer, size_t length)        override;
+    virtual int read(ByteArray::ptr ba, size_t length)   override;
+    virtual int write(const void* buffer, size_t length) override;
+    virtual int write(ByteArray::ptr ba, size_t length)  override;
+    virtual void close() override;
 
+    int flush();
 
+    bool isFree() const { return m_free; }
+    void setFree(bool v) { m_free = v; }
 
+    bool isEncode() const { return m_encode; }
+    void setEncode(bool v) { m_encode = v; }
 
+    std::vector<iovec>& getBuffers() { return m_buffs; }
+    
+    std::string getResult() const;
+    fang::ByteArray::ptr getByteArray();
 
+private:
+    int init(Type type = DEFLATE, int level = DEFAULT_COMPRESSION
+            , int window_bits = 15, int memlevel = 8, Strategy strategy = DEFAULT);
 
+    int encode(const iovec* v, const uint64_t& size, bool finish);
+    int decode(const iovec* v, const uint64_t& size, bool finish);
 
 };
-
-
-
-
-
-
 }

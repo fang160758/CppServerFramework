@@ -114,19 +114,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_scheduler
-
-# Build rule for target.
-test_scheduler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
-.PHONY : test_scheduler
-
-# fast build rule for target.
-test_scheduler/fast:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-.PHONY : test_scheduler/fast
-
-#=============================================================================
 # Target rules for targets named fangsev
 
 # Build rule for target.
@@ -166,32 +153,59 @@ http/http.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http.cc.s
 .PHONY : http/http.cc.s
 
-http/http11_parser.o: http/http11_parser.cc.o
+http/http11_parser.rl.o: http/http11_parser.rl.cc.o
 
-.PHONY : http/http11_parser.o
+.PHONY : http/http11_parser.rl.o
 
 # target to build an object file
-http/http11_parser.cc.o:
-	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http11_parser.cc.o
-.PHONY : http/http11_parser.cc.o
+http/http11_parser.rl.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o
+.PHONY : http/http11_parser.rl.cc.o
 
-http/http11_parser.i: http/http11_parser.cc.i
+http/http11_parser.rl.i: http/http11_parser.rl.cc.i
 
-.PHONY : http/http11_parser.i
+.PHONY : http/http11_parser.rl.i
 
 # target to preprocess a source file
-http/http11_parser.cc.i:
-	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http11_parser.cc.i
-.PHONY : http/http11_parser.cc.i
+http/http11_parser.rl.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.i
+.PHONY : http/http11_parser.rl.cc.i
 
-http/http11_parser.s: http/http11_parser.cc.s
+http/http11_parser.rl.s: http/http11_parser.rl.cc.s
 
-.PHONY : http/http11_parser.s
+.PHONY : http/http11_parser.rl.s
 
 # target to generate assembly for a file
-http/http11_parser.cc.s:
-	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http11_parser.cc.s
-.PHONY : http/http11_parser.cc.s
+http/http11_parser.rl.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.s
+.PHONY : http/http11_parser.rl.cc.s
+
+http/http_connection.o: http/http_connection.cc.o
+
+.PHONY : http/http_connection.o
+
+# target to build an object file
+http/http_connection.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_connection.cc.o
+.PHONY : http/http_connection.cc.o
+
+http/http_connection.i: http/http_connection.cc.i
+
+.PHONY : http/http_connection.i
+
+# target to preprocess a source file
+http/http_connection.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_connection.cc.i
+.PHONY : http/http_connection.cc.i
+
+http/http_connection.s: http/http_connection.cc.s
+
+.PHONY : http/http_connection.s
+
+# target to generate assembly for a file
+http/http_connection.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_connection.cc.s
+.PHONY : http/http_connection.cc.s
 
 http/http_parser.o: http/http_parser.cc.o
 
@@ -247,32 +261,32 @@ http/http_session.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/http_session.cc.s
 .PHONY : http/http_session.cc.s
 
-http/httpclient_parser.o: http/httpclient_parser.cc.o
+http/httpclient_parser.rl.o: http/httpclient_parser.rl.cc.o
 
-.PHONY : http/httpclient_parser.o
+.PHONY : http/httpclient_parser.rl.o
 
 # target to build an object file
-http/httpclient_parser.cc.o:
-	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.cc.o
-.PHONY : http/httpclient_parser.cc.o
+http/httpclient_parser.rl.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o
+.PHONY : http/httpclient_parser.rl.cc.o
 
-http/httpclient_parser.i: http/httpclient_parser.cc.i
+http/httpclient_parser.rl.i: http/httpclient_parser.rl.cc.i
 
-.PHONY : http/httpclient_parser.i
+.PHONY : http/httpclient_parser.rl.i
 
 # target to preprocess a source file
-http/httpclient_parser.cc.i:
-	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.cc.i
-.PHONY : http/httpclient_parser.cc.i
+http/httpclient_parser.rl.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.i
+.PHONY : http/httpclient_parser.rl.cc.i
 
-http/httpclient_parser.s: http/httpclient_parser.cc.s
+http/httpclient_parser.rl.s: http/httpclient_parser.rl.cc.s
 
-.PHONY : http/httpclient_parser.s
+.PHONY : http/httpclient_parser.rl.s
 
 # target to generate assembly for a file
-http/httpclient_parser.cc.s:
-	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.cc.s
-.PHONY : http/httpclient_parser.cc.s
+http/httpclient_parser.rl.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.s
+.PHONY : http/httpclient_parser.rl.cc.s
 
 http/servlet.o: http/servlet.cc.o
 
@@ -300,6 +314,33 @@ http/servlet.s: http/servlet.cc.s
 http/servlet.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/http/servlet.cc.s
 .PHONY : http/servlet.cc.s
+
+inc/uri.rl.o: inc/uri.rl.cc.o
+
+.PHONY : inc/uri.rl.o
+
+# target to build an object file
+inc/uri.rl.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/inc/uri.rl.cc.o
+.PHONY : inc/uri.rl.cc.o
+
+inc/uri.rl.i: inc/uri.rl.cc.i
+
+.PHONY : inc/uri.rl.i
+
+# target to preprocess a source file
+inc/uri.rl.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/inc/uri.rl.cc.i
+.PHONY : inc/uri.rl.cc.i
+
+inc/uri.rl.s: inc/uri.rl.cc.s
+
+.PHONY : inc/uri.rl.s
+
+# target to generate assembly for a file
+inc/uri.rl.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/inc/uri.rl.cc.s
+.PHONY : inc/uri.rl.cc.s
 
 src/address.o: src/address.cc.o
 
@@ -354,6 +395,33 @@ src/bytearray.s: src/bytearray.cc.s
 src/bytearray.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/bytearray.cc.s
 .PHONY : src/bytearray.cc.s
+
+src/config.o: src/config.cc.o
+
+.PHONY : src/config.o
+
+# target to build an object file
+src/config.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/config.cc.o
+.PHONY : src/config.cc.o
+
+src/config.i: src/config.cc.i
+
+.PHONY : src/config.i
+
+# target to preprocess a source file
+src/config.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/config.cc.i
+.PHONY : src/config.cc.i
+
+src/config.s: src/config.cc.s
+
+.PHONY : src/config.s
+
+# target to generate assembly for a file
+src/config.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/config.cc.s
+.PHONY : src/config.cc.s
 
 src/fd_manager.o: src/fd_manager.cc.o
 
@@ -706,33 +774,6 @@ stream/socket_stream.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/socket_stream.cc.s
 .PHONY : stream/socket_stream.cc.s
 
-tests/test_scheduler.o: tests/test_scheduler.cc.o
-
-.PHONY : tests/test_scheduler.o
-
-# target to build an object file
-tests/test_scheduler.cc.o:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o
-.PHONY : tests/test_scheduler.cc.o
-
-tests/test_scheduler.i: tests/test_scheduler.cc.i
-
-.PHONY : tests/test_scheduler.i
-
-# target to preprocess a source file
-tests/test_scheduler.cc.i:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.i
-.PHONY : tests/test_scheduler.cc.i
-
-tests/test_scheduler.s: tests/test_scheduler.cc.s
-
-.PHONY : tests/test_scheduler.s
-
-# target to generate assembly for a file
-tests/test_scheduler.cc.s:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
-.PHONY : tests/test_scheduler.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -741,32 +782,40 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_scheduler"
 	@echo "... fangsev"
 	@echo "... http/http.o"
 	@echo "... http/http.i"
 	@echo "... http/http.s"
-	@echo "... http/http11_parser.o"
-	@echo "... http/http11_parser.i"
-	@echo "... http/http11_parser.s"
+	@echo "... http/http11_parser.rl.o"
+	@echo "... http/http11_parser.rl.i"
+	@echo "... http/http11_parser.rl.s"
+	@echo "... http/http_connection.o"
+	@echo "... http/http_connection.i"
+	@echo "... http/http_connection.s"
 	@echo "... http/http_parser.o"
 	@echo "... http/http_parser.i"
 	@echo "... http/http_parser.s"
 	@echo "... http/http_session.o"
 	@echo "... http/http_session.i"
 	@echo "... http/http_session.s"
-	@echo "... http/httpclient_parser.o"
-	@echo "... http/httpclient_parser.i"
-	@echo "... http/httpclient_parser.s"
+	@echo "... http/httpclient_parser.rl.o"
+	@echo "... http/httpclient_parser.rl.i"
+	@echo "... http/httpclient_parser.rl.s"
 	@echo "... http/servlet.o"
 	@echo "... http/servlet.i"
 	@echo "... http/servlet.s"
+	@echo "... inc/uri.rl.o"
+	@echo "... inc/uri.rl.i"
+	@echo "... inc/uri.rl.s"
 	@echo "... src/address.o"
 	@echo "... src/address.i"
 	@echo "... src/address.s"
 	@echo "... src/bytearray.o"
 	@echo "... src/bytearray.i"
 	@echo "... src/bytearray.s"
+	@echo "... src/config.o"
+	@echo "... src/config.i"
+	@echo "... src/config.s"
 	@echo "... src/fd_manager.o"
 	@echo "... src/fd_manager.i"
 	@echo "... src/fd_manager.s"
@@ -806,9 +855,6 @@ help:
 	@echo "... stream/socket_stream.o"
 	@echo "... stream/socket_stream.i"
 	@echo "... stream/socket_stream.s"
-	@echo "... tests/test_scheduler.o"
-	@echo "... tests/test_scheduler.i"
-	@echo "... tests/test_scheduler.s"
 .PHONY : help
 
 

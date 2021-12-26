@@ -133,6 +133,7 @@ namespace fang {
     write data;
 }%%
 
+
 Uri::ptr Uri::Create(const std::string& uristr) {
     Uri::ptr uri(new Uri);
     int cs = 0;
@@ -173,7 +174,7 @@ const std::string& Uri::getPath() const {
 }
 
 int32_t Uri::getPort() const {
-    if(m_path) {
+    if(m_port) {
         return m_port;
     } else if (m_scheme == "http"
             || m_scheme == "ws") {
@@ -201,17 +202,17 @@ std::ostream& Uri::dump(std::ostream& os) const {
 }
 
 std::string Uri::toString() const {
-    std::stringstring ss;
+    std::stringstream ss;
     dump(ss);
     return ss.str();
 }
 
 Address::ptr Uri::createAddress() const {
-    auto addr = Address::LockupAnyIPAddress(m_host);
+    auto addr = Address::LookupAnyIPAddress(m_host);
     if (addr) {
-        add->setPort(getPort());
+        addr->setPort(getPort());
     }
-    return add;
+    return addr;
 }
 
 }

@@ -212,6 +212,7 @@ class HttpRequest {
         void setHeaders(const MapType& v) { m_headers = v; }
         void setParams(const MapType& v) { m_params = v; }
         void setCookies(const MapType& v) { m_cookies = v; }
+        void setClose(bool v) { m_close = v; }
 
         std::string getHeaders(const std::string& key, const std::string& def = "") const ;
         std::string getParams(const std::string& key,  const std::string& def = "") const ;

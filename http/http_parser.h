@@ -43,7 +43,7 @@ namespace http {
             typedef std::shared_ptr<HttpResponseParser> ptr;
             HttpResponseParser();
 
-            size_t execute(char* data, size_t len);
+            size_t execute(char* data, size_t len, bool chunck);
             int isFinished();
             int hasError();
 

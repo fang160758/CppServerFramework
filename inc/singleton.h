@@ -7,7 +7,6 @@ namespace fang {
 //类的单例
 template <typename T>
 class Singleton {
-
 public:
     static T * GetInstance() {
         static T t;

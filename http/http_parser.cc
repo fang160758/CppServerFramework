@@ -164,7 +164,10 @@ namespace http {
         rsp->getData()->setHeader(std::string(field, flen), std::string(value, vlen));
         //std::cout << "DEBUG_3" << std::endl;
     }
-    size_t HttpResponseParser::execute(char* data, size_t len) {
+    size_t HttpResponseParser::execute(char* data, size_t len, bool chunck) {
+        if (chunck) {
+            httpclient_parser_init(&m_parser);
+        }
         size_t offset = httpclient_parser_execute(&m_parser, data, len, 0);
         //std::cout << "DEBUG_4" << std::endl;
         //std::cout << offset << '\t' << len << std::endl;
