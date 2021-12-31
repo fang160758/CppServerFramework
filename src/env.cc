@@ -1,18 +1,27 @@
 #include "../inc/env.h"
 #include "../inc/log.h"
+#include "../inc/config.h"
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
 #include <string>
+#include <unistd.h>
+#include <sys/types.h>
+#include <iomanip>
 
 namespace fang {
 static fang::Logger::ptr g_logger = FANG_LOG_NAME("system");
 
 bool Env::init(int argc, char** argv) {
-    char link[1024];
-    char path[1024];
+    char link[1024] = {0};
+    char path[1024] = {0};
     sprintf(link, "/proc/%d/exe",getpid());
-    readlink(link, path, sizeof(path));
+    int ret = readlink(link, path, sizeof(path));
+    if (ret == -1) {
+        FANG_LOG_ERROR(g_logger) << "readlink fail"
+            <<" errno=" << errno << " errstr=" << strerror(errno);
+        return false;
+    }
 
     m_exe = path;
     auto pos = m_exe.find_last_of("/");

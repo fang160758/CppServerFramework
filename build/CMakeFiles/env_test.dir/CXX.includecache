@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fang/workspace/fangser/inc/env.h
+singleton.h
+/home/fang/workspace/fangser/inc/singleton.h
+mutex.h
+/home/fang/workspace/fangser/inc/mutex.h
+map
+-
+string
+-
+vector
+-
+
+/home/fang/workspace/fangser/inc/mutex.h
+singleton.h
+/home/fang/workspace/fangser/inc/singleton.h
+semaphore.h
+-
+pthread.h
+-
+atomic
+-
+
+/home/fang/workspace/fangser/inc/singleton.h
+
+/home/fang/workspace/fangser/tests/env_test.cc
+../inc/env.h
+/home/fang/workspace/fangser/inc/env.h
+iostream
+-
+iterator
+-
+

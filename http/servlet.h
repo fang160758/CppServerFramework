@@ -15,17 +15,33 @@ namespace http{
 class Servlet {
 public:
     typedef std::shared_ptr<Servlet> ptr;
-    
+
+    /**
+     * @Synopsis  构造器
+     *
+     * @Param[in] name 名称
+     */
     Servlet(const std::string& name)
         :m_name(name) {}
 
     virtual ~Servlet() {}
 
-    // 处理请求
+    /**
+     * @Synopsis  处理请求
+     *
+     * @Param[in] HTTP请求
+     * @Param[in] HTTP响应
+     * @Param[in] session HTTP连接
+     *
+     * @Returns   
+     */
     virtual int32_t handle(fang::http::HttpRequest::ptr resquest
                     , fang::http::HttpResponse::ptr response
                     , fang::http::HttpSession::ptr session) = 0;
 
+    /**
+     * @Synopsis  获取名称
+     */
     const std::string& getName() const { return m_name; }
 
 protected:
@@ -86,11 +102,12 @@ public:
 
     Servlet::ptr get() const override { return Servlet::ptr(new T); }
 
-    //std::string getName const override { return TypeToName<T>(); }
+    std::string getName const override { return TypeToName<T>(); }
 };
 
-
-
+/**
+ * @Synopsis  Servlet分发器
+ */
 class ServletDispatch : public Servlet {
 public:
     typedef std::shared_ptr<ServletDispatch> ptr;

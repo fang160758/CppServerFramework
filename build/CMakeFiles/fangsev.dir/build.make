@@ -270,9 +270,35 @@ CMakeFiles/fangsev.dir/src/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fangsev.dir/src/config.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fang/workspace/fangser/src/config.cc -o CMakeFiles/fangsev.dir/src/config.cc.s
 
+CMakeFiles/fangsev.dir/src/daemon.cc.o: CMakeFiles/fangsev.dir/flags.make
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../src/daemon.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/fangsev.dir/src/daemon.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/src/daemon.cc.o -c /home/fang/workspace/fangser/src/daemon.cc
+
+CMakeFiles/fangsev.dir/src/daemon.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fangsev.dir/src/daemon.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fang/workspace/fangser/src/daemon.cc > CMakeFiles/fangsev.dir/src/daemon.cc.i
+
+CMakeFiles/fangsev.dir/src/daemon.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fangsev.dir/src/daemon.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fang/workspace/fangser/src/daemon.cc -o CMakeFiles/fangsev.dir/src/daemon.cc.s
+
+CMakeFiles/fangsev.dir/src/env.cc.o: CMakeFiles/fangsev.dir/flags.make
+CMakeFiles/fangsev.dir/src/env.cc.o: ../src/env.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/fangsev.dir/src/env.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/src/env.cc.o -c /home/fang/workspace/fangser/src/env.cc
+
+CMakeFiles/fangsev.dir/src/env.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fangsev.dir/src/env.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fang/workspace/fangser/src/env.cc > CMakeFiles/fangsev.dir/src/env.cc.i
+
+CMakeFiles/fangsev.dir/src/env.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fangsev.dir/src/env.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fang/workspace/fangser/src/env.cc -o CMakeFiles/fangsev.dir/src/env.cc.s
+
 CMakeFiles/fangsev.dir/http/http.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/http.cc.o: ../http/http.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/fangsev.dir/http/http.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/fangsev.dir/http/http.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/http.cc.o -c /home/fang/workspace/fangser/http/http.cc
 
 CMakeFiles/fangsev.dir/http/http.cc.i: cmake_force
@@ -285,7 +311,7 @@ CMakeFiles/fangsev.dir/http/http.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/http/http_parser.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/http_parser.cc.o: ../http/http_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/fangsev.dir/http/http_parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/fangsev.dir/http/http_parser.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/http_parser.cc.o -c /home/fang/workspace/fangser/http/http_parser.cc
 
 CMakeFiles/fangsev.dir/http/http_parser.cc.i: cmake_force
@@ -298,7 +324,7 @@ CMakeFiles/fangsev.dir/http/http_parser.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/http/http_session.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/http_session.cc.o: ../http/http_session.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/fangsev.dir/http/http_session.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/fangsev.dir/http/http_session.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/http_session.cc.o -c /home/fang/workspace/fangser/http/http_session.cc
 
 CMakeFiles/fangsev.dir/http/http_session.cc.i: cmake_force
@@ -311,7 +337,7 @@ CMakeFiles/fangsev.dir/http/http_session.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/http/http_connection.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/http_connection.cc.o: ../http/http_connection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/fangsev.dir/http/http_connection.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/fangsev.dir/http/http_connection.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/http_connection.cc.o -c /home/fang/workspace/fangser/http/http_connection.cc
 
 CMakeFiles/fangsev.dir/http/http_connection.cc.i: cmake_force
@@ -324,7 +350,7 @@ CMakeFiles/fangsev.dir/http/http_connection.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/http/servlet.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/servlet.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/fangsev.dir/http/servlet.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/fangsev.dir/http/servlet.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/servlet.cc.o -c /home/fang/workspace/fangser/http/servlet.cc
 
 CMakeFiles/fangsev.dir/http/servlet.cc.i: cmake_force
@@ -337,7 +363,7 @@ CMakeFiles/fangsev.dir/http/servlet.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../stream/socket_stream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/fangsev.dir/stream/socket_stream.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/fangsev.dir/stream/socket_stream.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/stream/socket_stream.cc.o -c /home/fang/workspace/fangser/stream/socket_stream.cc
 
 CMakeFiles/fangsev.dir/stream/socket_stream.cc.i: cmake_force
@@ -348,9 +374,22 @@ CMakeFiles/fangsev.dir/stream/socket_stream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fangsev.dir/stream/socket_stream.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fang/workspace/fangser/stream/socket_stream.cc -o CMakeFiles/fangsev.dir/stream/socket_stream.cc.s
 
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: CMakeFiles/fangsev.dir/flags.make
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../stream/zlib_stream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o -c /home/fang/workspace/fangser/stream/zlib_stream.cc
+
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fangsev.dir/stream/zlib_stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fang/workspace/fangser/stream/zlib_stream.cc > CMakeFiles/fangsev.dir/stream/zlib_stream.cc.i
+
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fangsev.dir/stream/zlib_stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fang/workspace/fangser/stream/zlib_stream.cc -o CMakeFiles/fangsev.dir/stream/zlib_stream.cc.s
+
 CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o: ../http/http11_parser.rl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o -c /home/fang/workspace/fangser/http/http11_parser.rl.cc
 
 CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.i: cmake_force
@@ -363,7 +402,7 @@ CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o: ../http/httpclient_parser.rl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o -c /home/fang/workspace/fangser/http/httpclient_parser.rl.cc
 
 CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.i: cmake_force
@@ -376,7 +415,7 @@ CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.s: cmake_force
 
 CMakeFiles/fangsev.dir/inc/uri.rl.cc.o: CMakeFiles/fangsev.dir/flags.make
 CMakeFiles/fangsev.dir/inc/uri.rl.cc.o: ../inc/uri.rl.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/fangsev.dir/inc/uri.rl.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/fangsev.dir/inc/uri.rl.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fangsev.dir/inc/uri.rl.cc.o -c /home/fang/workspace/fangser/inc/uri.rl.cc
 
 CMakeFiles/fangsev.dir/inc/uri.rl.cc.i: cmake_force
@@ -404,12 +443,15 @@ fangsev_OBJECTS = \
 "CMakeFiles/fangsev.dir/src/iomanager.cc.o" \
 "CMakeFiles/fangsev.dir/src/stream.cc.o" \
 "CMakeFiles/fangsev.dir/src/config.cc.o" \
+"CMakeFiles/fangsev.dir/src/daemon.cc.o" \
+"CMakeFiles/fangsev.dir/src/env.cc.o" \
 "CMakeFiles/fangsev.dir/http/http.cc.o" \
 "CMakeFiles/fangsev.dir/http/http_parser.cc.o" \
 "CMakeFiles/fangsev.dir/http/http_session.cc.o" \
 "CMakeFiles/fangsev.dir/http/http_connection.cc.o" \
 "CMakeFiles/fangsev.dir/http/servlet.cc.o" \
 "CMakeFiles/fangsev.dir/stream/socket_stream.cc.o" \
+"CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o" \
 "CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o" \
 "CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o" \
 "CMakeFiles/fangsev.dir/inc/uri.rl.cc.o"
@@ -432,18 +474,21 @@ fangsev_EXTERNAL_OBJECTS =
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/src/iomanager.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/src/stream.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/src/config.cc.o
+../lib/libfangsev.so: CMakeFiles/fangsev.dir/src/daemon.cc.o
+../lib/libfangsev.so: CMakeFiles/fangsev.dir/src/env.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/http.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/http_parser.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/http_session.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/http_connection.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/servlet.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/stream/socket_stream.cc.o
+../lib/libfangsev.so: CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/http11_parser.rl.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/http/httpclient_parser.rl.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/inc/uri.rl.cc.o
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/build.make
 ../lib/libfangsev.so: CMakeFiles/fangsev.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX shared library ../lib/libfangsev.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fang/workspace/fangser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX shared library ../lib/libfangsev.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fangsev.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

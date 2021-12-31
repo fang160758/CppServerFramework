@@ -29,7 +29,7 @@ void Config::Visit(std::function<void(ConfigVarBase::ptr)> cb) {
     ConfigVarMap& m = GetDatas();
     for (auto it = m.begin();
             it != m.end(); ++it) {
-        cb(it->second);
+        cb(it->second); // 每一个配置项调用回调函数
     }
 }
 
@@ -65,7 +65,6 @@ void Config::LoadFromYaml(const YAML::Node& root) {
 
         std::transform(key.begin(), key.end(), key.begin(), ::tolower);
         ConfigVarBase::ptr var = LookupBase(key);
-        
         if (var) {
             if (i.second.IsScalar()) {
                 var->fromString(i.second.Scalar());

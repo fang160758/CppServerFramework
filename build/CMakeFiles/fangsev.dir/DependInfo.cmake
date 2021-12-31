@@ -15,6 +15,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fang/workspace/fangser/src/address.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/address.cc.o"
   "/home/fang/workspace/fangser/src/bytearray.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/bytearray.cc.o"
   "/home/fang/workspace/fangser/src/config.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/config.cc.o"
+  "/home/fang/workspace/fangser/src/daemon.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/daemon.cc.o"
+  "/home/fang/workspace/fangser/src/env.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/env.cc.o"
   "/home/fang/workspace/fangser/src/fd_manager.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/fd_manager.cc.o"
   "/home/fang/workspace/fangser/src/fiber.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/fiber.cc.o"
   "/home/fang/workspace/fangser/src/helpc.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/helpc.cc.o"
@@ -28,6 +30,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/fang/workspace/fangser/src/thread.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/thread.cc.o"
   "/home/fang/workspace/fangser/src/timer.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/src/timer.cc.o"
   "/home/fang/workspace/fangser/stream/socket_stream.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/stream/socket_stream.cc.o"
+  "/home/fang/workspace/fangser/stream/zlib_stream.cc" "/home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

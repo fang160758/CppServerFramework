@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <string.h>
+#include <string>
 #include <sys/syscall.h>
 #include <vector>
 #include "fiber.h"
@@ -18,10 +19,14 @@ namespace fang
     class Helpc
     {
     public:
+        static bool Mkdir(const std::string &dirname);
         static bool OpenFileWirte(std::ofstream &, const std::string &, std::ios_base::openmode);
         static void ListAllFile(std::vector<std::string>& files
                                 , const std::string& path
                                 , const std::string& subfix);
+
+        static bool IsRunningPidfile(const std::string& pidfile);
+        static bool Unlink(const std::string& filename, bool exist = false);
     };
 
     template<typename T>
@@ -29,6 +34,9 @@ namespace fang
         static const char* s_name = abi::__cxa_demangle(typeid(T).name(), nullptr, nullptr, nullptr);
         return s_name;
     }
+
+    std::string Time2Str(time_t ts = time(0), const std::string& format = "%Y-%m-%d %H:%M:%S");
+    //time_t Str2Time(const char* str, const char* format);
 }
 
 #endif

@@ -114,6 +114,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named config_test
+
+# Build rule for target.
+config_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 config_test
+.PHONY : config_test
+
+# fast build rule for target.
+config_test/fast:
+	$(MAKE) -f CMakeFiles/config_test.dir/build.make CMakeFiles/config_test.dir/build
+.PHONY : config_test/fast
+
+#=============================================================================
+# Target rules for targets named env_test
+
+# Build rule for target.
+env_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 env_test
+.PHONY : env_test
+
+# fast build rule for target.
+env_test/fast:
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/build
+.PHONY : env_test/fast
+
+#=============================================================================
+# Target rules for targets named daemon_test
+
+# Build rule for target.
+daemon_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 daemon_test
+.PHONY : daemon_test
+
+# fast build rule for target.
+daemon_test/fast:
+	$(MAKE) -f CMakeFiles/daemon_test.dir/build.make CMakeFiles/daemon_test.dir/build
+.PHONY : daemon_test/fast
+
+#=============================================================================
 # Target rules for targets named fangsev
 
 # Build rule for target.
@@ -422,6 +461,60 @@ src/config.s: src/config.cc.s
 src/config.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/config.cc.s
 .PHONY : src/config.cc.s
+
+src/daemon.o: src/daemon.cc.o
+
+.PHONY : src/daemon.o
+
+# target to build an object file
+src/daemon.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/daemon.cc.o
+.PHONY : src/daemon.cc.o
+
+src/daemon.i: src/daemon.cc.i
+
+.PHONY : src/daemon.i
+
+# target to preprocess a source file
+src/daemon.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/daemon.cc.i
+.PHONY : src/daemon.cc.i
+
+src/daemon.s: src/daemon.cc.s
+
+.PHONY : src/daemon.s
+
+# target to generate assembly for a file
+src/daemon.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/daemon.cc.s
+.PHONY : src/daemon.cc.s
+
+src/env.o: src/env.cc.o
+
+.PHONY : src/env.o
+
+# target to build an object file
+src/env.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/env.cc.o
+.PHONY : src/env.cc.o
+
+src/env.i: src/env.cc.i
+
+.PHONY : src/env.i
+
+# target to preprocess a source file
+src/env.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/env.cc.i
+.PHONY : src/env.cc.i
+
+src/env.s: src/env.cc.s
+
+.PHONY : src/env.s
+
+# target to generate assembly for a file
+src/env.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/src/env.cc.s
+.PHONY : src/env.cc.s
 
 src/fd_manager.o: src/fd_manager.cc.o
 
@@ -774,6 +867,114 @@ stream/socket_stream.cc.s:
 	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/socket_stream.cc.s
 .PHONY : stream/socket_stream.cc.s
 
+stream/zlib_stream.o: stream/zlib_stream.cc.o
+
+.PHONY : stream/zlib_stream.o
+
+# target to build an object file
+stream/zlib_stream.cc.o:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o
+.PHONY : stream/zlib_stream.cc.o
+
+stream/zlib_stream.i: stream/zlib_stream.cc.i
+
+.PHONY : stream/zlib_stream.i
+
+# target to preprocess a source file
+stream/zlib_stream.cc.i:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/zlib_stream.cc.i
+.PHONY : stream/zlib_stream.cc.i
+
+stream/zlib_stream.s: stream/zlib_stream.cc.s
+
+.PHONY : stream/zlib_stream.s
+
+# target to generate assembly for a file
+stream/zlib_stream.cc.s:
+	$(MAKE) -f CMakeFiles/fangsev.dir/build.make CMakeFiles/fangsev.dir/stream/zlib_stream.cc.s
+.PHONY : stream/zlib_stream.cc.s
+
+tests/config_test.o: tests/config_test.cc.o
+
+.PHONY : tests/config_test.o
+
+# target to build an object file
+tests/config_test.cc.o:
+	$(MAKE) -f CMakeFiles/config_test.dir/build.make CMakeFiles/config_test.dir/tests/config_test.cc.o
+.PHONY : tests/config_test.cc.o
+
+tests/config_test.i: tests/config_test.cc.i
+
+.PHONY : tests/config_test.i
+
+# target to preprocess a source file
+tests/config_test.cc.i:
+	$(MAKE) -f CMakeFiles/config_test.dir/build.make CMakeFiles/config_test.dir/tests/config_test.cc.i
+.PHONY : tests/config_test.cc.i
+
+tests/config_test.s: tests/config_test.cc.s
+
+.PHONY : tests/config_test.s
+
+# target to generate assembly for a file
+tests/config_test.cc.s:
+	$(MAKE) -f CMakeFiles/config_test.dir/build.make CMakeFiles/config_test.dir/tests/config_test.cc.s
+.PHONY : tests/config_test.cc.s
+
+tests/daemon_test.o: tests/daemon_test.cc.o
+
+.PHONY : tests/daemon_test.o
+
+# target to build an object file
+tests/daemon_test.cc.o:
+	$(MAKE) -f CMakeFiles/daemon_test.dir/build.make CMakeFiles/daemon_test.dir/tests/daemon_test.cc.o
+.PHONY : tests/daemon_test.cc.o
+
+tests/daemon_test.i: tests/daemon_test.cc.i
+
+.PHONY : tests/daemon_test.i
+
+# target to preprocess a source file
+tests/daemon_test.cc.i:
+	$(MAKE) -f CMakeFiles/daemon_test.dir/build.make CMakeFiles/daemon_test.dir/tests/daemon_test.cc.i
+.PHONY : tests/daemon_test.cc.i
+
+tests/daemon_test.s: tests/daemon_test.cc.s
+
+.PHONY : tests/daemon_test.s
+
+# target to generate assembly for a file
+tests/daemon_test.cc.s:
+	$(MAKE) -f CMakeFiles/daemon_test.dir/build.make CMakeFiles/daemon_test.dir/tests/daemon_test.cc.s
+.PHONY : tests/daemon_test.cc.s
+
+tests/env_test.o: tests/env_test.cc.o
+
+.PHONY : tests/env_test.o
+
+# target to build an object file
+tests/env_test.cc.o:
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/tests/env_test.cc.o
+.PHONY : tests/env_test.cc.o
+
+tests/env_test.i: tests/env_test.cc.i
+
+.PHONY : tests/env_test.i
+
+# target to preprocess a source file
+tests/env_test.cc.i:
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/tests/env_test.cc.i
+.PHONY : tests/env_test.cc.i
+
+tests/env_test.s: tests/env_test.cc.s
+
+.PHONY : tests/env_test.s
+
+# target to generate assembly for a file
+tests/env_test.cc.s:
+	$(MAKE) -f CMakeFiles/env_test.dir/build.make CMakeFiles/env_test.dir/tests/env_test.cc.s
+.PHONY : tests/env_test.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -782,6 +983,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... config_test"
+	@echo "... env_test"
+	@echo "... daemon_test"
 	@echo "... fangsev"
 	@echo "... http/http.o"
 	@echo "... http/http.i"
@@ -816,6 +1020,12 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/daemon.o"
+	@echo "... src/daemon.i"
+	@echo "... src/daemon.s"
+	@echo "... src/env.o"
+	@echo "... src/env.i"
+	@echo "... src/env.s"
 	@echo "... src/fd_manager.o"
 	@echo "... src/fd_manager.i"
 	@echo "... src/fd_manager.s"
@@ -855,6 +1065,18 @@ help:
 	@echo "... stream/socket_stream.o"
 	@echo "... stream/socket_stream.i"
 	@echo "... stream/socket_stream.s"
+	@echo "... stream/zlib_stream.o"
+	@echo "... stream/zlib_stream.i"
+	@echo "... stream/zlib_stream.s"
+	@echo "... tests/config_test.o"
+	@echo "... tests/config_test.i"
+	@echo "... tests/config_test.s"
+	@echo "... tests/daemon_test.o"
+	@echo "... tests/daemon_test.i"
+	@echo "... tests/daemon_test.s"
+	@echo "... tests/env_test.o"
+	@echo "... tests/env_test.i"
+	@echo "... tests/env_test.s"
 .PHONY : help
 
 

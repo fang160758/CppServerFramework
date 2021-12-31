@@ -10,7 +10,10 @@ public:
 
     HttpServer(bool keepalive = false
         , fang::IoManager* worker = fang::IoManager::GetThis()
+        , fang::IoManager* io_worker = fang::IoManager::GetThis()
         , fang::IoManager* accept_worker = fang::IoManager::GetThis());
+
+
 
 protected:
     virtual void handleClient(Socket::ptr client) override;

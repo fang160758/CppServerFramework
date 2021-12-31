@@ -1,12 +1,9 @@
-
-/*
- * @Descripttion:
- * @version:
- * @Author: Fang
- * @email: 2192294938@qq.com
- * @Date: 2021-11-22 13:16:34
- * @LastEditors: Fang
- * @LastEditTime: 2021-11-30 10:25:03
+/**
+ * @file log.h
+ * @Synopsis  
+ * @author Fang
+ * @version 1.1
+ * @date 2021-12-28
  */
 
 #ifndef __FANG_LOG_H__

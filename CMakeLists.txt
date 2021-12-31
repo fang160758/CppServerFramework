@@ -37,6 +37,15 @@ function(ragelmaker src_rl outputlist outputdir)
     set_source_files_properties(${rl_out} PROPERTIES GENERATED TRUE)
 endfunction(ragelmaker)
 
+
+function(fang_add_executable targetname srcs depends libs)
+    add_executable(${targetname} ${srcs})
+    add_dependencies(${targetname} ${depends})
+    target_link_libraries(${targetname} ${libs})
+endfunction()
+
+
+
 set(LIB_SRC
         src/hook.cc
         src/fd_manager.cc
@@ -53,18 +62,24 @@ set(LIB_SRC
         src/iomanager.cc
         src/stream.cc
         src/config.cc
+        src/daemon.cc   
+        src/env.cc
         http/http.cc
         http/http_parser.cc
         http/http_session.cc
         http/http_connection.cc
         http/servlet.cc
         stream/socket_stream.cc
+        stream/zlib_stream.cc
 		)
 
 
 ragelmaker(http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/http)
 ragelmaker(http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/http)
 ragelmaker(inc/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/inc)
+
+
+
 
 add_library(fangsev SHARED ${LIB_SRC})
 
@@ -73,7 +88,14 @@ set(LIBS
         dl
         pthread
         yaml-cpp
+        z
 		)
+
+    
+fang_add_executable(daemon_test "tests/daemon_test.cc" fangsev "${LIBS}")
+fang_add_executable(env_test "tests/env_test.cc" fangsev "${LIBS}")
+fang_add_executable(config_test "tests/config_test.cc" fangsev "${LIBS}")
+    
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 

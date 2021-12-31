@@ -143,46 +143,45 @@ public:
     HttpConnection::ptr getConnection();
 
     // 做HTTP的GET请求 --- > url(string)
-    static HttpResult::ptr DoGet(const std::string& url
+    HttpResult::ptr doGet(const std::string& url
                             , uint64_t timeout_ms
                             , const std::map<std::string, std::string>& headers = {}
                             , const std::string& body = "");
     
     // 做HTTP的GET请求 --- > uri(class Uri)
-    static HttpResult::ptr DoGet(Uri::ptr uri
+    HttpResult::ptr doGet(Uri::ptr uri
                             , uint64_t timeout_ms
                             , const std::map<std::string, std::string>& headers = {}
                             , const std::string& body = "");
 
     // 做HTTP的POST请求 --- > url(string)
-    static HttpResult::ptr DoPost(const std::string& url
+    HttpResult::ptr doPost(const std::string& url
                             , uint64_t timeout_ms
                             , const std::map<std::string, std::string>& headers = {}
                             , const std::string& body = "");
     
     // 做HTTP的POST请求 --- > uri(class Uri)
-    static HttpResult::ptr DoPost(Uri::ptr uri
+    HttpResult::ptr doPost(Uri::ptr uri
                             , uint64_t timeout_ms
                             , const std::map<std::string, std::string>& headers = {}
                             , const std::string& body = "");
    
     // 做HTTP的请求 --- > url(string)
-    static HttpResult::ptr DoRequest(HttpMethod method
+    HttpResult::ptr doRequest(HttpMethod method
                             , const std::string& url
                             , uint64_t timeout_ms
                             , const std::map<std::string, std::string>& headers = {}
                             , const std::string& body = "");
  
     // 做HTTP的请求 --- > uri(class Uri)
-    static HttpResult::ptr DoRequest(HttpMethod method
+    HttpResult::ptr doRequest(HttpMethod method
                             , Uri::ptr uri
                             , uint64_t timeout_ms
                             , const std::map<std::string, std::string>& headers = {}
                             , const std::string& body = "");
 
     // 做HTTP的请求 --- > req(class HttpRequest)
-    static HttpResult::ptr DoRequest(HttpRequest::ptr req
-                            , Uri::ptr uri
+    HttpResult::ptr doRequest(HttpRequest::ptr req
                             , uint64_t timeout_ms);
 
 private:

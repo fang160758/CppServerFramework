@@ -87,6 +87,26 @@ CMakeFiles/fangsev.dir/src/config.cc.o
  /home/fang/workspace/fangser/inc/singleton.h
  /home/fang/workspace/fangser/inc/thread.h
  /home/fang/workspace/fangser/src/config.cc
+CMakeFiles/fangsev.dir/src/daemon.cc.o
+ /home/fang/workspace/fangser/inc/config.h
+ /home/fang/workspace/fangser/inc/daemon.h
+ /home/fang/workspace/fangser/inc/fiber.h
+ /home/fang/workspace/fangser/inc/helpc.h
+ /home/fang/workspace/fangser/inc/log.h
+ /home/fang/workspace/fangser/inc/mutex.h
+ /home/fang/workspace/fangser/inc/singleton.h
+ /home/fang/workspace/fangser/inc/thread.h
+ /home/fang/workspace/fangser/src/daemon.cc
+CMakeFiles/fangsev.dir/src/env.cc.o
+ /home/fang/workspace/fangser/inc/config.h
+ /home/fang/workspace/fangser/inc/env.h
+ /home/fang/workspace/fangser/inc/fiber.h
+ /home/fang/workspace/fangser/inc/helpc.h
+ /home/fang/workspace/fangser/inc/log.h
+ /home/fang/workspace/fangser/inc/mutex.h
+ /home/fang/workspace/fangser/inc/singleton.h
+ /home/fang/workspace/fangser/inc/thread.h
+ /home/fang/workspace/fangser/src/env.cc
 CMakeFiles/fangsev.dir/src/fd_manager.cc.o
  /home/fang/workspace/fangser/inc/fd_manager.h
  /home/fang/workspace/fangser/inc/hook.h
@@ -161,6 +181,7 @@ CMakeFiles/fangsev.dir/src/socket.cc.o
  /home/fang/workspace/fangser/inc/hook.h
  /home/fang/workspace/fangser/inc/log.h
  /home/fang/workspace/fangser/inc/mutex.h
+ /home/fang/workspace/fangser/inc/mydef.h
  /home/fang/workspace/fangser/inc/singleton.h
  /home/fang/workspace/fangser/inc/socket.h
  /home/fang/workspace/fangser/inc/thread.h
@@ -189,3 +210,15 @@ CMakeFiles/fangsev.dir/stream/socket_stream.cc.o
  /home/fang/workspace/fangser/inc/stream.h
  /home/fang/workspace/fangser/stream/socket_stream.cc
  /home/fang/workspace/fangser/stream/socket_stream.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o
+ /home/fang/workspace/fangser/inc/bytearray.h
+ /home/fang/workspace/fangser/inc/fiber.h
+ /home/fang/workspace/fangser/inc/helpc.h
+ /home/fang/workspace/fangser/inc/log.h
+ /home/fang/workspace/fangser/inc/macro.h
+ /home/fang/workspace/fangser/inc/mutex.h
+ /home/fang/workspace/fangser/inc/singleton.h
+ /home/fang/workspace/fangser/inc/stream.h
+ /home/fang/workspace/fangser/inc/thread.h
+ /home/fang/workspace/fangser/stream/zlib_stream.cc
+ /home/fang/workspace/fangser/stream/zlib_stream.h

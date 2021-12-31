@@ -9,6 +9,7 @@
  */
 #include "helpc.h"
 #include "log.h"
+#include <sched.h>
 #include <string>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -75,7 +76,7 @@ static int __mkdir(const char *dirname)
     return mkdir(dirname, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
 }
 
-static bool Mkdir(const std::string &dirname)
+bool Helpc::Mkdir(const std::string &dirname)
 {
     if (__lstat(dirname) == 0)
         return true;
@@ -168,4 +169,41 @@ void Helpc::ListAllFile(std::vector<std::string>& files
     closedir(dir);
 }
 
+
+bool Helpc::IsRunningPidfile(const std::string& pidfile) {
+    if (__lstat(pidfile.c_str()) != 0) {
+        return false;
+    }
+    std::ifstream ifs(pidfile);
+    std::string line;
+    if (!ifs || !std::getline(ifs, line)) {
+        return false;
+    }
+    if (line.empty()) {
+        return false;
+    }
+    pid_t pid = atoi(line.c_str());
+    if (pid <= 1) {
+        return false;
+    }
+    if (kill(pid, 0) != 0) {
+        return false;
+    }
+    return true;
+}
+
+std::string Time2Str(time_t ts, const std::string& format) {
+    struct tm tm;
+    localtime_r(&ts, &tm);
+    char buf[64];
+    strftime(buf, sizeof(buf), format.c_str(), &tm);
+    return buf;
+}
+
+bool Helpc::Unlink(const std::string& filename, bool exist) {
+    if (!exist && __lstat(filename.c_str())) {
+        return true;
+    }
+    return unlink(filename.c_str()) == 0;
+}
 }

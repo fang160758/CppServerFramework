@@ -11,10 +11,10 @@ namespace fang {
         return Create(encode, buff_size, ZLIB);
     }
     ZlibStream::ptr ZlibStream::CreateDeflate(bool encode, uint32_t buff_size) {
-        Create(encode, buff_size, DEFLATE);
+        return Create(encode, buff_size, DEFLATE);
     }
     ZlibStream::ptr ZlibStream::Create(bool encode, uint32_t buff_size
-            , Type type, int levelDEFAULT_COMPRESSION, int window_bits
+            , Type type, int level, int window_bits
             , int memlevel, Strategy strategy) {
         ZlibStream::ptr rt(new ZlibStream(encode, buff_size));
         if (rt->init(type, level, window_bits, memlevel, strategy) == Z_OK) {
@@ -23,7 +23,7 @@ namespace fang {
         return nullptr;
     }
 
-    ZlibStream::ZlibStream(bool encode, uint32_t buff_size = 4096)
+    ZlibStream::ZlibStream(bool encode, uint32_t buff_size)
         :m_buffSize(buff_size)
         ,m_encode(encode)
         ,m_free(true) {}
@@ -34,9 +34,9 @@ namespace fang {
             }
         }
         if (m_encode) {
-            deflatEnd(&m_zstream);
+            deflateEnd(&m_zstream);
         } else {
-            inflatEnd(&m_zstream);
+            inflateEnd(&m_zstream);
         }
     }
 
@@ -78,9 +78,9 @@ namespace fang {
         ivc.iov_base = nullptr;
         ivc.iov_len = 0;
         if (m_encode) {
-            return encode(ivc, 1, true);
+            return encode(&ivc, 1, true);
         } else {
-            return decode(ivc, 1, true);
+            return decode(&ivc, 1, true);
         }
     }
 
@@ -102,7 +102,7 @@ namespace fang {
     }
 
     int ZlibStream::init(Type type, int level, int window_bits
-            , int memlevel, strategy) {
+            , int memlevel, Strategy strategy) {
         FANG_ASSERT((level >= 0 && level <= 9) || level == DEFAULT_COMPRESSION);
         FANG_ASSERT((window_bits >= 8 && window_bits <= 15));
         FANG_ASSERT((memlevel >= 1 && memlevel <= 9));
@@ -157,7 +157,7 @@ namespace fang {
                 m_zstream.avail_out = m_buffSize - ivc->iov_len;
                 m_zstream.next_out = (Bytef*)ivc->iov_base + ivc->iov_len;
 
-                ret = deflate(z_stream, flush);
+                ret = deflate(&m_zstream, flush);
                 if (ret == Z_STREAM_ERROR) {
                     return ret;
                 }
@@ -201,11 +201,8 @@ namespace fang {
             } while(m_zstream.avail_out == 0);
         }
         if (flush == Z_FINISH) {
-            inflateEnd(m_zstream);
+            inflateEnd(&m_zstream);
         }
         return Z_OK;
     }
-
-};
-
 }

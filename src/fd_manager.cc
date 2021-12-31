@@ -38,7 +38,7 @@ bool FdCtx::init() {
 
     if (m_isSocket) {
         int flags = fcntl_f(m_fd, F_GETFL, 0);
-        if (!(flags & O_NONBLOCK)) {
+        if (!(flags & O_NONBLOCK)) { // 如果是socket文件描述符就设置为阻塞
             fcntl_f(m_fd, F_SETFL, flags | O_NONBLOCK);
         }
         m_sysNonblock = true;
@@ -100,6 +100,4 @@ void FdManager::del(int fd) {
     }
     m_datas[fd].reset();
 }
-
-
 }

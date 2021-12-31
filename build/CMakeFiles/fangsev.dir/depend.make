@@ -87,6 +87,26 @@ CMakeFiles/fangsev.dir/src/config.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/config.cc.o: ../inc/thread.h
 CMakeFiles/fangsev.dir/src/config.cc.o: ../src/config.cc
 
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/config.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/daemon.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/fiber.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/helpc.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/log.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/singleton.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../inc/thread.h
+CMakeFiles/fangsev.dir/src/daemon.cc.o: ../src/daemon.cc
+
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/config.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/env.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/fiber.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/helpc.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/log.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/singleton.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../inc/thread.h
+CMakeFiles/fangsev.dir/src/env.cc.o: ../src/env.cc
+
 CMakeFiles/fangsev.dir/src/fd_manager.cc.o: ../inc/fd_manager.h
 CMakeFiles/fangsev.dir/src/fd_manager.cc.o: ../inc/hook.h
 CMakeFiles/fangsev.dir/src/fd_manager.cc.o: ../inc/mutex.h
@@ -160,6 +180,7 @@ CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/hook.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/log.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/mydef.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/socket.h
 CMakeFiles/fangsev.dir/src/socket.cc.o: ../inc/thread.h
@@ -188,4 +209,16 @@ CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../inc/socket.h
 CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../inc/stream.h
 CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../stream/socket_stream.cc
 CMakeFiles/fangsev.dir/stream/socket_stream.cc.o: ../stream/socket_stream.h
+
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/bytearray.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/fiber.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/helpc.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/log.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/macro.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/singleton.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/stream.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/thread.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../stream/zlib_stream.cc
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../stream/zlib_stream.h
 

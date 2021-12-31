@@ -1,3 +1,6 @@
 /home/fang/workspace/fangser/build/CMakeFiles/rebuild_cache.dir
 /home/fang/workspace/fangser/build/CMakeFiles/edit_cache.dir
+/home/fang/workspace/fangser/build/CMakeFiles/config_test.dir
+/home/fang/workspace/fangser/build/CMakeFiles/env_test.dir
+/home/fang/workspace/fangser/build/CMakeFiles/daemon_test.dir
 /home/fang/workspace/fangser/build/CMakeFiles/fangsev.dir

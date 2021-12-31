@@ -1,6 +1,7 @@
 #include "../inc/address.h"
 #include "../inc/endian_.h"
 #include <iterator>
+#include <memory>
 #include <sstream>
 #include <netdb.h> 
 #include <ifaddrs.h>
@@ -219,6 +220,31 @@ namespace fang {
 
     bool Address::operator!=(const Address& rhs) const {
         return !(*this == rhs);
+    }
+
+    IPAddress::ptr IPAddress::Create(const char* address, uint16_t port) {
+        addrinfo hints, *results;
+        memset(&hints, 0, sizeof(hints));
+
+        hints.ai_flags = AI_NUMERICHOSH;
+        hints.ai_family = AF_UNSPEC;
+
+        int error = getaddrinfo(address, NULL, &hints, &results);
+        if (error) {
+            return nullptr;
+        }
+        try {
+            IPAddress::ptr result = std::dynamic_pointer_cast<IPAddress>(
+                    Address::Create(result->ai_addr, (socklen_t)result->ai_addrlen));
+            if (result) {
+                result->setPort(port);
+            }
+            freeaddrinfo(results);
+            return result;
+        } catch (...){
+            freeaddrinfo(results);
+            return nullptr;
+        }
     }
 
     IPv4Address::IPv4Address(const struct sockaddr_in& address) {
@@ -485,4 +511,7 @@ namespace fang {
         return os;
     }
 
+    std::ostream& operator<<(std::ostream& os, const Address& addr) {
+        return addr.insert(os);
+    }
 }

@@ -1,0 +1,14 @@
+class:
+    map:
+        1:
+            name: lifang
+            age: 12
+            sex: true
+    vec_map:
+        1:
+            - name: ll
+              age: 32
+              sex: true
+            - name: ss
+              age: 45
+              sex: false

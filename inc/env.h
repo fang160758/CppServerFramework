@@ -3,6 +3,7 @@
 #include "mutex.h"
 #include <map>
 #include <string>
+#include <vector>
 namespace fang {
 class Env {
 public:
