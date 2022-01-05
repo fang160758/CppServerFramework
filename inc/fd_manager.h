@@ -29,7 +29,7 @@ public:
      * @Param[in] fd 文件描述符
      */
     FdCtx(int fd);
-    ~FdCtx();
+    ~FdCtx() {}
 
     /**
      * @Synopsis  是否初始化

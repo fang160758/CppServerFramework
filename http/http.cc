@@ -1,4 +1,5 @@
 #include "http.h"
+#include <memory>
 #include <string>
 
 
@@ -65,6 +66,10 @@ namespace http {
         , m_close(close)
         , m_path("/") {}
 
+    std::shared_ptr<HttpResponse> HttpRequest::createResponse() {
+        HttpResponse::ptr rsp(new HttpResponse(getVersion(), isClose()));
+        return rsp;
+    }
 
     std::string HttpRequest::getHeaders(const std::string& key, const std::string& def) const {
         auto it = m_headers.find(key);

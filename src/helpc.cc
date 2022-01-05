@@ -13,10 +13,12 @@
 #include <string>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <stdio.h>
 #include <execinfo.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <dirent.h>
-
+#include <signal.h>
 namespace fang
 {
 fang::Logger::ptr g_logger = FANG_LOG_NAME("system");
@@ -200,10 +202,67 @@ std::string Time2Str(time_t ts, const std::string& format) {
     return buf;
 }
 
+time_t Str2Time(const char* str, const char* format) {
+    struct tm t;
+    memset(&t, 0, sizeof(t));
+    if (!strptime(str, format, &t)) {
+        return 0;
+    }
+    return mktime(&t);
+}
+
+
 bool Helpc::Unlink(const std::string& filename, bool exist) {
     if (!exist && __lstat(filename.c_str())) {
         return true;
     }
     return unlink(filename.c_str()) == 0;
 }
+
+
+
+std::string StringUtil::Formatv(const char* fmt, va_list ap) {
+    char* buf = nullptr;
+    int len = vasprintf(&buf, fmt, ap);
+    if (len == -1) {
+        return "";
+    }
+    std::string ret(buf, len);
+    free(buf);
+    return ret;
+
+
+    int64_t TypeUtil::Atoi(const std::string& str) {
+        if (str.empty()) {
+            return 0;
+        }
+        return strtoull(str.c_str(), nullptr, 10);
+    }
+
+    double TypeUtil::Atof(const std::string& str) {
+        if (str.empty()) {
+            return 0;
+        }
+        return atof(str.c_str());
+    }
+    
+    int64_t TypeUtil::Atoi(const char* str) {
+        if (str == nullptr) {
+            return 0;
+        }    
+        return strtoull(str, nullptr, 10);
+    }
+   
+    double TypeUtil::Atof(const char* str) {
+        if (str == nullptr) {
+            return 0;
+        }
+        return atof(str);
+    }
+
+
+}
+
+
+
 }

@@ -9,6 +9,7 @@
 #include "http_session.h"
 #include "http.h"
 #include "../inc/mutex.h"
+#include "../inc/helpc.h"
 namespace fang{
 namespace http{
 
@@ -102,7 +103,7 @@ public:
 
     Servlet::ptr get() const override { return Servlet::ptr(new T); }
 
-    std::string getName const override { return TypeToName<T>(); }
+    std::string getName() const override { return TypeToName<T>(); }
 };
 
 /**

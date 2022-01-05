@@ -1,4 +1,4 @@
-#include "../inc/macro.h"
+#include "../inc/mydef.h"
 #include "zlib_stream.h"
 #include <stdexcept>
 

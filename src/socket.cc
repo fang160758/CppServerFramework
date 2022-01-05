@@ -490,7 +490,7 @@ bool SSLSocket::connect(const Address::ptr addr, uint64_t timeout_ms) {
     bool v = Socket::connect(addr, timeout_ms);
     if (v) {
         m_ctx.reset(SSL_CTX_new(SSLv23_client_method()), SSL_CTX_free);
-        m_ssl.reset(SSL_new(m_ctx.get()), SSL_CTX_free);
+        m_ssl.reset(SSL_new(m_ctx.get()), SSL_free);
         SSL_set_fd(m_ssl.get(), m_sock);
         v = (SSL_connect(m_ssl.get()) == 1);
     }

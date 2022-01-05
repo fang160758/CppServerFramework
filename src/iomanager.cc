@@ -1,16 +1,16 @@
 #include "../inc/iomanager.h"
 #include "../inc/log.h"
-#include "../inc/macro.h"
+#include "../inc/mydef.h"
 #include <sys/epoll.h>
 #include <unistd.h>
 #include <fcntl.h>
 
 
 #define MAX_EVENTS 256 
+
 namespace fang {
 
 static fang::Logger::ptr g_logger = FANG_LOG_NAME("system");
-
 
 IoManager* IoManager::GetThis() {
     return dynamic_cast<IoManager*>(Scheduler::GetThis());
@@ -315,9 +315,6 @@ bool IoManager::cancelAll(int fd) {
     }
     return true;
 }
-
-
-
 
 IoManager::FdContext::EventContext& IoManager::FdContext::getContext(IoManager::Event event) {
     switch(event) {

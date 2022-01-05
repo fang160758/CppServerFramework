@@ -59,6 +59,8 @@ CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/servlet.cc
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../http/servlet.h
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/address.h
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/bytearray.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/fiber.h
+CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/mutex.h
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/http/servlet.cc.o: ../inc/socket.h
@@ -113,11 +115,12 @@ CMakeFiles/fangsev.dir/src/fd_manager.cc.o: ../inc/mutex.h
 CMakeFiles/fangsev.dir/src/fd_manager.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/fd_manager.cc.o: ../src/fd_manager.cc
 
+CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/config.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/fiber.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/log.h
-CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/macro.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/mydef.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/scheduler.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/fiber.cc.o: ../inc/thread.h
@@ -141,8 +144,8 @@ CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/fiber.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/iomanager.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/log.h
-CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/macro.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/mydef.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/scheduler.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/iomanager.cc.o: ../inc/thread.h
@@ -166,8 +169,8 @@ CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/fiber.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/hook.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/log.h
-CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/macro.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/mydef.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/scheduler.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/scheduler.cc.o: ../inc/thread.h
@@ -198,6 +201,8 @@ CMakeFiles/fangsev.dir/src/thread.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/thread.cc.o: ../inc/thread.h
 CMakeFiles/fangsev.dir/src/thread.cc.o: ../src/thread.cc
 
+CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/fiber.h
+CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/mutex.h
 CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/src/timer.cc.o: ../inc/timer.h
@@ -214,8 +219,8 @@ CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/bytearray.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/fiber.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/helpc.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/log.h
-CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/macro.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/mutex.h
+CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/mydef.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/singleton.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/stream.h
 CMakeFiles/fangsev.dir/stream/zlib_stream.cc.o: ../inc/thread.h

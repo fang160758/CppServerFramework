@@ -1,7 +1,8 @@
 #include "../inc/fiber.h"
 #include "../inc/log.h"
-#include "../inc/macro.h"
+#include "../inc/mydef.h"
 #include "../inc/scheduler.h"
+#include "../inc/config.h"
 #include <atomic>
 #include <stdlib.h>
 #include <exception>
@@ -11,6 +12,9 @@
 namespace fang {
 
 static fang::Logger::ptr g_logger = FANG_LOG_NAME("system");
+
+static fang::ConfigVar<uint32_t>::ptr g_fiber_stack_size
+    = fang::Config::Lookup<uint32_t>("fiber.stack.size", 128 * 1024, "fiber satck size");
 
 static std::atomic<uint64_t> s_fiber_id {0};
 static std::atomic<uint64_t> s_fiber_count {0};
@@ -53,7 +57,6 @@ uint64_t Fiber::GetTotalFibers() {
     return s_fiber_count;
 }
 
-
 void Fiber::YieldToReady() {
     Fiber::ptr cur = GetThis();         //获取线程上的当前协程
     FANG_ASSERT(cur->m_state == EXEC);  //判断协程是否时执行状态
@@ -88,7 +91,7 @@ Fiber::Fiber(std::function<void()> cb,
     :m_id(++s_fiber_id)
     ,m_cb(cb){
     ++s_fiber_count;
-    m_stacksize = stacksize ? stacksize : DEFAULT_STACK_SIZE;
+    m_stacksize = stacksize ? stacksize : g_fiber_stack_size->getValue();
     m_stack = StackAllocator::Alloc(m_stacksize);
     //m_stack = malloc(128);
     int ret = getcontext(&m_ctx);

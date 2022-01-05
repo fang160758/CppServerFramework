@@ -1,7 +1,7 @@
 #include "../inc/scheduler.h"
 #include "../inc/log.h"
 #include "../inc/hook.h"
-#include "../inc/macro.h"
+#include "../inc/mydef.h"
 #include "../inc/helpc.h"
 namespace fang {
 

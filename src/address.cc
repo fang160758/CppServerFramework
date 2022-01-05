@@ -226,7 +226,7 @@ namespace fang {
         addrinfo hints, *results;
         memset(&hints, 0, sizeof(hints));
 
-        hints.ai_flags = AI_NUMERICHOSH;
+        hints.ai_flags = AI_NUMERICHOST;
         hints.ai_family = AF_UNSPEC;
 
         int error = getaddrinfo(address, NULL, &hints, &results);
@@ -235,7 +235,7 @@ namespace fang {
         }
         try {
             IPAddress::ptr result = std::dynamic_pointer_cast<IPAddress>(
-                    Address::Create(result->ai_addr, (socklen_t)result->ai_addrlen));
+                    Address::Create(results->ai_addr, (socklen_t)results->ai_addrlen));
             if (result) {
                 result->setPort(port);
             }

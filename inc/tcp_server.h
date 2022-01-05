@@ -214,7 +214,7 @@ protected:
     /**
      * @Synopsis  开始接受socket连接
      */
-    virtual void startAccept(Socket::ptr sock);
+    virtual void [<0;70;26M]startAccept(Socket::ptr sock);
 
 protected:
     std::vector<Socket::ptr> m_socks;   // 监听socket数组

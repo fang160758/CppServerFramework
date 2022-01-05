@@ -179,7 +179,7 @@ T getAs(const MapType& m, const std::string& key, const T& def = T()) {
     return def; 
 }
 
-
+class HttpResponse;
 class HttpRequest {
     public:
         typedef std::shared_ptr<HttpRequest> ptr;
@@ -187,9 +187,10 @@ class HttpRequest {
 
         HttpRequest(uint8_t version = 0x11, bool close = true);
 
+        std::shared_ptr<HttpResponse> createResponse();
+
         HttpMethod getMethod() const { return m_method; }
         uint8_t getVersion() const { return m_version; }
-        HttpStatus getStatus() const { return m_status; }
         const std::string& getPath() const { return m_path; }
         const std::string& getQuery() const { return m_query; }
         const std::string& getFragment() const { return m_fragment; }
@@ -213,6 +214,9 @@ class HttpRequest {
         void setParams(const MapType& v) { m_params = v; }
         void setCookies(const MapType& v) { m_cookies = v; }
         void setClose(bool v) { m_close = v; }
+        void setWebsocket(bool v) { m_websocket = v; }
+
+        bool isWebsocket() const { return m_websocket; }
 
         std::string getHeaders(const std::string& key, const std::string& def = "") const ;
         std::string getParams(const std::string& key,  const std::string& def = "") const ;
@@ -266,21 +270,20 @@ class HttpRequest {
         std::string toString() const;
         std::ostream& dump(std::ostream& os) const;
     private:
-        HttpMethod m_method;
-        uint8_t m_version;
-        HttpStatus m_status;
-        bool m_close;
-        bool m_websocket;
+        HttpMethod m_method;        // 请求方法
+        uint8_t m_version;          // 请求版本
+        bool m_close;               // 是否自动关闭
+        bool m_websocket;           // 是否为websocket
 
-        uint8_t m_parserParamFlag;
+        uint8_t m_parserParamFlag;  // 
 
-        std::string m_path;
-        std::string m_query;
-        std::string m_fragment;
-        std::string m_body;
-        MapType m_headers;      //请求头部
-        MapType m_params;       //请求参数
-        MapType m_cookies;      //请求cookie
+        std::string m_path;         // 请求路径
+        std::string m_query;        // 请求参数
+        std::string m_fragment;     // 请求fragment
+        std::string m_body;         // 请求消息体
+        MapType m_headers;          //请求头部
+        MapType m_params;           //请求参数
+        MapType m_cookies;          //请求cookie
 };
 
 
@@ -303,7 +306,9 @@ class HttpResponse {
         void setBody(const std::string& v) { m_body = v;}
         void setReason(const std::string& v) { m_reason = v;}
         void setHeaders(const MapType& v) { m_headers = v;}
+        void setWebsocket(bool v) { m_websocket = v; }
 
+        bool isWebsocket() const { return m_websocket; }
         bool isClose() const { return m_close;}
         void setClose(bool v) { m_close = v;}
 
@@ -325,12 +330,13 @@ class HttpResponse {
         std::string toString() const;
         std::ostream& dump(std::ostream& os) const;
     private:
-        HttpStatus m_status;
-        uint8_t m_version;
-        bool m_close;
-        std::string m_body;
-        std::string m_reason;
-        MapType m_headers;
+        HttpStatus m_status; // 响应状态
+        uint8_t m_version;   // 版本
+        bool m_close;        // 是否自动关闭
+        bool m_websocket;    // 是否为websocket
+        std::string m_body;  // 响应消息体
+        std::string m_reason;// 响应原因
+        MapType m_headers;   // 响应头部
         std::vector<std::string> m_cookies;
 };
 

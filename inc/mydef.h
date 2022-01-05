@@ -2,7 +2,7 @@
 #define __FANG__MYDEF_H__
 #include <stdbool.h>
 #include <assert.h>
-
+#include "log.h"
 #if defined __GNUC__ || defined __llvm__
 #define FANG_LIKELY(x)    __builtin_expect(!!(x), 1)
 

@@ -97,7 +97,7 @@ public:
      *
      * @Param[in] Address::ptr 地址
      */
-    virtual bool bind(const Address::ptr);
+    virtual bool bind(const Address::ptr address);
 
     /**
      * @Synopsis  发起连接
@@ -105,7 +105,7 @@ public:
      * @Param[in] Address::ptr 地址
      * @Param[in] timeout_ms 超时时间(毫秒)
      */
-    virtual bool connect(const Address::ptr, uint64_t timeout_ms = -1); // 连接地址
+    virtual bool connect(const Address::ptr address, uint64_t timeout_ms = -1); // 连接地址
     virtual bool reconnect(uint64_t timeout_ms = -1);
 
     /**
@@ -199,7 +199,6 @@ public:
     virtual Socket::ptr accept() override;
     virtual bool bind(const Address::ptr) override;
     virtual bool connect(const Address::ptr, uint64_t timeout_ms = -1) override;
-    virtual bool reconnect(uint64_t timeout_ms = -1) override;
     virtual bool listen(int backlog = SOMAXCONN) override;
     virtual bool close() override;
                 
@@ -226,11 +225,8 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& os, const Socket& sock);
+
 }
-
-
-
-
 
 
 #endif

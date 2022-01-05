@@ -69,6 +69,9 @@ set(LIB_SRC
         http/http_session.cc
         http/http_connection.cc
         http/servlet.cc
+        http/ws_server.h
+        http/ws_servlet.h
+        http/ws_session.h
         stream/socket_stream.cc
         stream/zlib_stream.cc
 		)
@@ -89,6 +92,8 @@ set(LIBS
         pthread
         yaml-cpp
         z
+        crypto
+        ssl
 		)
 
     
